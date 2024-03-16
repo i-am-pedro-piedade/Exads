@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<ruleset name="PHPMD rule set"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0
+                     http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="
+                     http://pmd.sf.net/ruleset_xml_schema.xsd">
+    <description>
+        My custom rule set that checks my code...
+    </description>
+
+    <rule ref="tests/PhpMd/cleancode.xml">
+        <exclude name="StaticAccess" />
+        <exclude name="IfStatementAssignment" />
+        <exclude name="BooleanArgumentFlag" />
+        <exclude name="ElseExpression" />
+        <exclude name="NumberOfChildren" />
+    </rule>
+    <rule ref="tests/PhpMd/codesize.xml" />
+    <rule ref="tests/PhpMd/controversial.xml">
+        <exclude name="CamelCaseMethodName" />
+    </rule>
+    <rule ref="tests/PhpMd/design.xml" />
+    <rule ref="tests/PhpMd/naming.xml" />
+    <rule ref="tests/PhpMd/unusedcode.xml" />
+
+</ruleset>

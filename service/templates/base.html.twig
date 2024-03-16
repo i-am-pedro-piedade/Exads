@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="EXADS">
+    <meta name="generator" content="Symfony">
+    <title>{% block title %}EXADS{% endblock %}</title>
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+</head>
+<body class="body">
+<div class="container py-3">
+    <header>
+        <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                <a href="/" class="btn btn-outline-dark rounded-pill">
+                    <i class="fa-solid fa-h"></i>
+                </a>
+                <span class="fs-4 ms-4">
+                    {% block header %}{% endblock %}
+                </span>
+            </a>
+
+            <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link {% if app.request.get('_route') == 'divisors_index' %}active{% endif %}" aria-current="page" href="{{ path('divisors_index') }}">Numbers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if app.request.get('_route') == 'ascii_index' %}active{% endif %}" href="{{ path('ascii_index') }}">ASCII</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if app.request.get('_route') == 'tv_shows_index' %}active{% endif %}" href="{{ path('tv_shows_index') }}">TV Shows</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if app.request.get('_route') == 'a_b_testing_index' %}active{% endif %}" href="{{ path('a_b_testing_index') }}">A/B Testing</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        {% block body %}{% endblock %}
+    </main>
+</div>
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+{% endblock %}
+</body>
+</html>

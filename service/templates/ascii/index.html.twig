@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    ASCII
+{% endblock %}
+{% block header %}
+    ASCII
+{% endblock %}
+{% block body %}
+    <div class="card">
+        <div class="card-body">
+            <div class="card-text mb-3">
+                <h5 class="card-title">Original list</h5>
+                <code>{{ ascii.originalList | join('')}}</code>
+            </div>
+            <div class="card-text mb-3">
+                <h5 class="card-title">Result list</h5>
+                <code>{{ ascii.resultList | join('')}}</code>
+            </div>
+            <div class="card-text mb-3">
+                <h5 class="card-title">Difference</h5>
+                <span class="badge text-bg-secondary">{{ ascii.difference | join('') | escape}}</span>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    Numbers, divisors and primes
+{% endblock %}
+{% block header %}
+    Numbers, divisors and primes
+{% endblock %}
+{% block body %}
+    <div class="card">
+        <div class="card-body">
+            {% for number in numbers %}
+                <div class="mb-2">
+                    <h6>
+                      <span class="badge text-bg-danger">
+                        # {{ number.number }}
+                      </span>
+                        <code>
+                            {% if(number.divisors|length is same as 2) %}
+                                [PRIME]
+                            {% else %}
+                                [{{ number.divisors|join(', ') }}]
+                            {% endif %}
+                        </code>
+                    </h6>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

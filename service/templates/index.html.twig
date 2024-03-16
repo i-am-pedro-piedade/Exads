@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    EXADS
+{% endblock %}
+{% block body %}
+    <div class="row g-4 py-4 row-cols-1">
+        <div class="col-6 d-flex align-items-stretch">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Numbers, divisors and primes</h3>
+                </div>
+                <div class="card-body">
+                    <p>
+                        Write a PHP script that prints all integer values from 1 to 100.
+                    </p>
+                    <p>
+                        Beside each number, print the numbers it is a multiple of (inside brackets and comma-separated).
+                        If only multiple of itself then print “[PRIME]”.
+                    </p>
+                </div>
+                <div class="card-footer text-muted">
+                    <a href="{{ path('divisors_index') }}" class="w-100 btn btn-primary">Numbers, divisors and primes</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 d-flex align-items-stretch">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">ASCII list</h3>
+                </div>
+                <div class="card-body">
+                    <p>
+                        Write a PHP script to generate a random array containing all the ASCII characters from comma (“,”) to
+                        pipe (“|”). Then randomly remove and discard an arbitrary element from this newly generated array.
+                    </p>
+                    <p>
+                        Write the code to efficiently determine the missing character.
+                    </p>
+                </div>
+                <div class="card-footer text-muted">
+                    <a href="{{ path('ascii_index') }}" class="w-100 btn btn-primary">ASCII list</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 d-flex align-items-stretch">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">TV Shows</h3>
+                </div>
+                <div class="card-body">
+                    <p>
+                        Populate a MySQL (InnoDB) database with data from at least 3 TV Series using the following structure:
+                    </p>
+                    <p>
+                        <code>
+                            tv_series -> (id, title, channel, gender);<br>
+                            tv_series_intervals -> (id_tv_series, week_day, show_time);
+                        </code>
+                    </p>
+                    <p>
+                        <small>* Provide the SQL scripts that create and populate the DB;</small>
+                    </p>
+                    <p>
+                        Using OOP, write a code that tells when the next TV Series will air based on the current time-date or
+                        inputted time-date, and that can be optionally filtered by TV Series title.
+                    </p>
+                </div>
+                <div class="card-footer text-muted">
+                    <a href="{{ path('tv_shows_index') }}" class="w-100 btn btn-primary">TV Shows</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 d-flex align-items-stretch">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">A/B Testing</h3>
+                </div>
+                <div class="card-body">
+                    <p>
+                        Exads would like to A/B test some promotional designs to see which provides the best conversion rate.
+                    </p>
+                    <p>
+                        Write a snippet of PHP code that redirects end users to the different designs based on the data provided by this library: packagist.org/exads/ab-test-data
+                    </p>
+                    <p>
+                        The code needs to be object-oriented and scalable. The number of designs per promotion may vary.
+                    </p>
+                </div>
+                <div class="card-footer text-muted">
+                    <a href="{{ path('a_b_testing_index') }}" class="w-100 btn btn-primary">A/B Testing</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
