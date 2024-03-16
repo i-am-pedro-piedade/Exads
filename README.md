@@ -9,6 +9,12 @@ This is using https://replit.com/, a collaboration platform.
 
 To be able to view the code and run the app, you will need to Fork the project, Sign Up or Sign In and then Run the server.
 
+Unfortunately there are 2 little drawbacks of using Replit:
+
+* PHPUnit won't run on Replit because the Services is using PHP 8.2 RC7 instead of a final version.
+* Also, on Replit, the Database is SQLite instead of MySQL.
+
+
 ## Or get a docker up and running
 Assuming Docker is already installed in your machine, open a terminal in the project root folder and run these commands:
 * ```make build```
