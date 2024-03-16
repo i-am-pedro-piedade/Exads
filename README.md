@@ -3,7 +3,7 @@
 This repository contains a Symfony application with EXADS code challenges
 
 ## Do you need help?
-If the following instructions look like Vietnamese to you or if you don't have the necessary tools in your local machine to run them, I can provide an URL with a running version of the project. Please let me know by emailing me to pedro@nitrogenio.net
+If you don't have the necessary tools in your local machine to run the following instructions, please head to this URL instead: https://replit.com/@pedro126/ExadsCodeChallenge
 
 ## Get a docker up and running
 Assuming Docker is already installed in your machine, open a terminal in the project root folder and run these commands:
